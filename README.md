@@ -1,3 +1,5 @@
+# finetune-pk-v1
+
 # PK-Genesis-v1 MedGemma 4B Finetune Source
 
 This repo contains source files for finetuning MedGemma 4B with PK-Genesis-v1 identity behavior while preserving medical capability.
