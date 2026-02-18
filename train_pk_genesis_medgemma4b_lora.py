@@ -92,17 +92,20 @@ def main():
         output_dir=OUT_DIR,
         per_device_train_batch_size=1,
         gradient_accumulation_steps=8,
-        learning_rate=8e-5,
-        num_train_epochs=2,
+        learning_rate=2e-4,
+        num_train_epochs=3,
         warmup_ratio=0.03,
         logging_steps=10,
+        logging_first_step=True,
         save_steps=100,
         save_total_limit=2,
         bf16=True,
         gradient_checkpointing=True,
+        gradient_checkpointing_kwargs={"use_reentrant": False},
         report_to="none",
         dataloader_num_workers=2,
         optim="adamw_torch",
+        seed=42,
     )
 
     trainer = Trainer(
